@@ -4,7 +4,7 @@ export default class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: 0
     };
 }
 
@@ -30,11 +30,12 @@ reset = () => {
 
 
   render() {
-      const {increment,decrement,reset} = this.state;
-    return (<div className="counter">
-     <button className="inc" onClick={increment}>+</button>
-     <button className="dec" onClick={decrement}>-</button>
-     <button className="reset" onClick={reset}>Reset</button>
+    return (
+    <div className="counter">
+     <span>{this.state.count}</span>
+     <button className="inc" onClick={this.increment}>+</button>
+     <button className="dec" onClick={this.decrement}>-</button>
+     <button className="reset" onClick={this.reset}>Reset</button>
     </div>
     )
   }
