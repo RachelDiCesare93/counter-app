@@ -29,6 +29,8 @@ export default class Counter extends React.Component {
 
   render() {
     return (
+     <div className="counter-header">
+        <h1>Let's Count</h1>
       <div className="counter">
         <span>{this.state.count}</span>
         <div className="buttons">
@@ -42,6 +44,7 @@ export default class Counter extends React.Component {
             Reset
           </button>
         </div>
+      </div>
       </div>
     );
   }

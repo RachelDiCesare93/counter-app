@@ -1,20 +1,82 @@
-.counter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
+/* fonts */
 
-  span {
-    font-size: 20px;
+@font-face {
+  font-family: "101-compass";
+  src: url(./101compass/101Compass.ttf);
+}
+
+@font-face {
+  font-family: "5th-grade-cursive";
+  src: url(./5th_grade_cursive/5thgradecursive-2.ttf);
+}
+
+/* variables */
+
+$first-color: black;
+$second-color: whitesmoke;
+$no-border: none;
+
+/* counter styles */
+
+* {
+  background-color: $second-color;
+  border: 1px double $first-color;
+}
+
+.counter-header {
+  h1 {
+    text-align: center;
+    font-family: "101-compass";
+    font-size: 5em;
+    letter-spacing: 1rem;
+    color: $first-color;
+    border: $no-border;
   }
+  .counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border: $no-border;
 
-  .buttons {
-    margin-top: 15px;
+    span {
+      font-size: 50px;
+      color: $first-color;
+      font-family: "5th-grade-cursive";
+      border: $no-border;
+    }
 
-    .inc,
-    .dec,
-    .reset {
-      margin: 10px;
+    .buttons {
+      margin-top: 15px;
+      border: $no-border;
+
+      button:hover {
+        background-color: grey;
+        color: $first-color;
+      }
+
+      .inc,
+      .dec {
+        font-size: 25px;
+      }
+
+      .reset {
+        font-size: 15px;
+      }
+      .inc,
+      .dec,
+      .reset {
+        margin: 10px;
+        background-color: $first-color;
+        color: $second-color;
+        vertical-align: middle;
+        font-family: "5th-grade-cursive";
+        font-weight: bold;
+        border: $no-border;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 }
