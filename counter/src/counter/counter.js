@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./counter.scss";
 
+//TODO : Rename file to be counterclass 
+
 export default class Counter extends React.Component {
   constructor(props) {
     super(props);
